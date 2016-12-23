@@ -5,11 +5,15 @@ using System.Web;
 using System.Web.Mvc;
 namespace ComicBookGallery.Controllers
 {
-    class ComicBooksController : Controller
+    public class ComicBooksController : Controller
     {
-        public string Details()
+        public ActionResult Details()
         {
-            return "Hello from the Comic Book Controller";
+            if(DateTime.Today.DayOfWeek == DayOfWeek.Monday)
+            {
+                Redirect("/");
+            }
+            return Content("Welcome to the comic book controller");
         }
     }
 }

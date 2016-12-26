@@ -7,6 +7,11 @@ namespace ComicBookGallery.Models
 {
     public class Artist
     {
+        public static int Total { get; set; }
+        public Artist()
+        {
+            Total += 1;
+        }
         public string Name { get; set; }
         public string Role { get; set; }
     }

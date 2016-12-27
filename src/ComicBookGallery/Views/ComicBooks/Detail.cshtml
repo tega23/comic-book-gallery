@@ -6,7 +6,7 @@
     ViewBag.Title = Model.DisplayText;
 }
  
-<h2>The Amazing Spider-Man #700</h2>
+<h2>@Model.DisplayText</h2>
 
 <div class="row">
     <div class="col-md-6">
@@ -28,7 +28,7 @@
                 <ul>
                     @foreach(Artist artist in Model.Artists)
                     {
-                        <li>@artist.Name : @artist.Role</li>
+                        <li>@artist.Role : @artist.Name</li>
                     }
                 </ul>
             </div>
